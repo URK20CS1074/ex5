@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, height=500px initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <script>
+        function fun(){
+            var n=document.getElementById('amt').value;
+            var n1=document.getElementById('intr').value;
+            var N=document.getElementById('ten').value;
+            var a=n1/12/100;
+            var int=n*a*N;
+            var emi= n * a*(1+a)^N/[(1+a)^N - 1];
+            var tot=parseInt(n)+parseInt(int)
+            document.getElementById('box1').innerHTML= "Loan Amount : " + n;
+            document.getElementById('box2').innerHTML= "Total Intrest : " + int;
+            document.getElementById('box3').innerHTML= "emi : " + emi;
+            document.getElementById('box4').innerHTML= "Total Repayment : " +tot;
+
+        }
+    </script>
+
+</head>
+<body>
+    <div class="b1">
+    <div class="h1">
+    <h1><center>Loan EMI Calculator</center></h1>
+   <center>Loan Amount(Rs.):<br>
+    <input type="text" id="amt" onkeyup="fun()"><br><br><br>
+    Annual Intrest Rate(%):<br>
+    <input type="text" id="intr" onkeyup="fun()"><br><br><br>
+    Tenure(Years):<br>
+    <input type="text" id="ten" onkeyup="fun()"><br><br><br></center> </div>
+    <div id="box1" style="background-color:blue; color: azure; border-radius: 10px; text-align: center;"></div><br>
+    <div id="box2" style="background-color:blue; color: azure; border-radius: 10px; text-align: center;"></div><br>
+    <div id="box3" style="background-color:blue; color: azure; border-radius: 10px; text-align: center;"></div><br>
+    <div id="box4" style="background-color:blue; color: azure; border-radius: 10px; text-align: center;"></div></div>
+</body>

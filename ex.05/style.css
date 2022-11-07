@@ -1,0 +1,14 @@
+
+.b1{
+    margin-left:500px;
+    margin-right: 600px;
+    border-left: 5px;
+
+    border-style: solid;
+    border-color: blue;
+    border-radius: 5px;
+}
+.h1{
+    
+    color: blue;
+}
